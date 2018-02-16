@@ -145,3 +145,46 @@ class Digraph:
         del self.parents[head][tail]
         self.edges -= 1
 
+    def remove_node(self, node):
+        '''removes node from digraph and removes all arcs incident on input node'''
+        if node not in self.nodes:
+            return
+
+        self.edges -= len(self.children[node]) + len(self.parents[node])
+
+        #Unlink children:
+        for child in self.children[node]:
+            del self.parents[child][node]
+
+        #Unlink parents"
+        for parents in self.parents[node]:
+            del self.children[parents][node]
+
+        del self.children[node]
+        del self.parents[node]
+        self.nodes.remove(node)
+
+    def __len__(self):
+        return len(self.nodes)
+
+    def number_of_arcs(self):
+        return self.edges
+
+    def get_parents_of(self, node):
+        '''returns all parents of node'''
+        if node not in self.nodes:
+            return []
+        return self.parents[node].keys()
+
+    def get_children_of(self, node):
+        '''returns all children of node'''
+        if node not in self.nodes:
+            return []
+        return self.children[node].keys()
+
+    def clear(self):
+        del self.nodes[:]
+        self.children.clear()
+        self.parents.clear()
+        self.edges=0
+
