@@ -10,6 +10,135 @@
       <year>2017</year>
     </copyright>
   </metadata>
+  <wpt lat="36.559326" lon="-118.35892">
+    <name>Mount Whitney Trail</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="36.694386" lon="-118.373436">
+    <name>Forester Pass</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.7612" lon="-119.24874">
+    <name>Donohue Pass</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.737072" lon="-119.194534">
+    <name>Island Pass</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="36.789352" lon="-118.41197">
+    <name>Glen Pass</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="36.936207" lon="-118.41228">
+    <name>Pinchot Pass</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.03144" lon="-118.459656">
+    <name>Mather Pass</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.111736" lon="-118.67024">
+    <name>Muir Pass</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.289383" lon="-118.87271">
+    <name>Seldon Pass</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.470005" lon="-118.92262">
+    <name>Silver Pass</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.527664" lon="-118.94906">
+    <name>Purple Lake</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.610085" lon="-119.07515">
+    <name>Reds Meadows</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.872246" lon="-119.38354">
+    <name>Tuolumne Meadows Trail</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.83443" lon="-119.41555">
+    <name>Cathedral Pass</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.79456" lon="-119.43211">
+    <name>Sunrise Camp</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.79164" lon="-119.26127">
+    <name>Lyell Fork Base Trail</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="36.594788" lon="-118.37013">
+    <name>Wallace Creek</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="36.87344" lon="-118.43961">
+    <name>Woods Creek</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="36.969917" lon="-118.44583">
+    <name>Taboose Pass Trail</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.0523" lon="-118.578186">
+    <name>Palisade Creek</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.225853" lon="-118.86113">
+    <name>Blaney Meadows Trail</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.368317" lon="-118.88829">
+    <name>Bear Creek Trail</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.38864" lon="-118.91966">
+    <name>Bear Ridge</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.412575" lon="-118.923996">
+    <name>Mono Creek Bridge</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.645397" lon="-119.09892">
+    <name>Johnson Meadow</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.687386" lon="-119.12046">
+    <name>Rosalie Lake</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.71516" lon="-119.15119">
+    <name>Garnet Lake</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.72847" lon="-119.17016">
+    <name>Thousand Island Lake</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.86845" lon="-119.33289">
+    <name>Tuolumne Meadows Trail</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.74516" lon="-119.51198">
+    <name>Halfdome Trail</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="37.73266" lon="-119.55743">
+    <name>Happy Isle</name>
+    <cmt/>
+  </wpt>
+  <wpt lat="36.57823" lon="-118.29241">
+    <name>Whitney Summit</name>
+    <cmt/>
+  </wpt>
+  
   <trk>
     <name>John Muir Trail (JMT)</name>
     <link href="https://www.hikingproject.com/trail/7016162/john-muir-trail-jmt"/>

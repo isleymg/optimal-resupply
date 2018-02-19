@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="CALTOPO" source="https://caltopo.com/m/4G4J" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+  <wpt lat="36.559326" lon="-118.35892">
+    <name>Mount Whitney Trail</name>
+    <cmt/>
+  </wpt>
+  <trk>
+    <name>Exit - Tuolumne Spur</name>
+    <cmt/>
+    <extensions>
+      <gpxx:TrackExtension>
+        <gpxx:DisplayColor>Red</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+    <trkseg>
+      <trkpt lat="37.87876" lon="-119.36521"/>
+      <trkpt lat="37.878273" lon="-119.36584"/>
+      <trkpt lat="37.87792" lon="-119.36614"/>
+      <trkpt lat="37.875774" lon="-119.36639"/>
+      <trkpt lat="37.875103" lon="-119.36664"/>
+      <trkpt lat="37.874306" lon="-119.36742"/>
+      <trkpt lat="37.873207" lon="-119.36876"/>
+      <trkpt lat="37.87219" lon="-119.370346"/>
+      <trkpt lat="37.87173" lon="-119.37144"/>
+      <trkpt lat="37.87086" lon="-119.37179"/>
+      <trkpt lat="37.870647" lon="-119.37173"/>
+    </trkseg>
+  </trk>
+</gpx>
