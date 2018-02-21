@@ -1,4 +1,8 @@
 
+'''
+Script to read a gpx file and print all tracks, waypoints, and routes
+'''
+
 from graphs import Graph 
 import gpxpy
 import requests
@@ -39,7 +43,8 @@ for waypoint in gpx.waypoints:
   waypt_count += 1
   print ('Waypoint at {0:25s} -> ({1:7f},{2:7f})'.format(waypoint.name, waypoint.latitude, waypoint.longitude))
 
-
+print("ROUTES")
+print("------------------------------------------")
 for route in gpx.routes:
     print ('Route:')
     for point in route.points:

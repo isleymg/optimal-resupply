@@ -1,46 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx creator="CALTOPO" source="https://caltopo.com/m/4G4J" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
-  <trk>
-    <name>Alt - Devils Postpile Alternate</name>
-    <cmt/>
-    <extensions>
-      <gpxx:TrackExtension>
-        <gpxx:DisplayColor>Yellow</gpxx:DisplayColor>
-      </gpxx:TrackExtension>
-    </extensions>
+   <trk>
+    <name>04 - JMT - Main</name>
     <trkseg>
-      <trkpt lat="37.614002" lon="-119.082855"/>
-      <trkpt lat="37.615463" lon="-119.08281"/>
-      <trkpt lat="37.61594" lon="-119.08244"/>
-      <trkpt lat="37.61623" lon="-119.08249"/>
+      <trkpt lat="36.558933" lon="-118.36178">
+        <ele>4000</ele>
+      </trkpt>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="36.559635" lon="-118.36213">
+        <ele>4000</ele>
+      </trkpt>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="36.559673" lon="-118.36297">
+        <ele>4000</ele>
+      </trkpt>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="36.5598" lon="-118.36286">
+        <ele>4000</ele>
+      </trkpt>
     </trkseg>
   </trk>
 
-  <wpt lat="36.559326" lon="-118.35892">
-    <name>Mount Whitney Trail</name>
-    <cmt/>
-  </wpt>
-  <wpt lat="36.694386" lon="-118.373436">
-    <name>Forester Pass</name>
-    <cmt/>
-  </wpt>
-  <wpt lat="37.7612" lon="-119.24874">
-    <name>Donohue Pass</name>
-    <cmt/>
-  </wpt>
-  <rte>
-    <name>02 - Mountaineers Route</name>
-    <cmt/>
-    <rtept lat="36.587044" lon="-118.24533">
-      <name>1</name>
-    </rtept>
-    <rtept lat="36.58708" lon="-118.24696">
-      <name>2</name>
-    </rtept>
-    <rtept lat="36.58692" lon="-118.24892">
-      <name>3</name>
-    </rtept>
-  </rte>
+
 
 <!--   <trk>
     <name>04 - JMT - Main</name>

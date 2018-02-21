@@ -182,6 +182,10 @@ class Digraph:
             return []
         return self.children[node].keys()
 
+    def get_stats(self):
+        print("Number of nodes: {}\nNumber of children: {}\nNumber of parents: {}\nNumber of edges: {}"
+              .format(len(self.nodes), len(self.children), len(self.parents), self.edges))
+
     def clear(self):
         del self.nodes[:]
         self.children.clear()

@@ -16,3 +16,9 @@ for track in jmt_gpx.tracks:
   for segment in track.segments:
     for point in segment.points:
       digraph.add_node(point)
+
+digraph.get_stats()
+
+# TODO: 
+# 1) modify Digraph class to print visual of nodes
+# 2) modify node data structure to allow for name/lat-long/elevation
