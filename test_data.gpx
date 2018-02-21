@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx creator="CALTOPO" source="https://caltopo.com/m/4G4J" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
-   <trk>
-    <name>04 - JMT - Main</name>
-    <trkseg>
-      <trkpt lat="36.558933" lon="-118.36178">
-        <ele>4000</ele>
-      </trkpt>
-    </trkseg>
-    <trkseg>
-      <trkpt lat="36.559635" lon="-118.36213">
-        <ele>4000</ele>
-      </trkpt>
-    </trkseg>
-    <trkseg>
-      <trkpt lat="36.559673" lon="-118.36297">
-        <ele>4000</ele>
-      </trkpt>
-    </trkseg>
-    <trkseg>
-      <trkpt lat="36.5598" lon="-118.36286">
-        <ele>4000</ele>
-      </trkpt>
-    </trkseg>
-  </trk>
 
-
-
-<!--   <trk>
+  <trk>
     <name>04 - JMT - Main</name>
     <cmt/>
     <extensions>
@@ -3489,5 +3464,5 @@
       <trkpt lat="37.868732" lon="-119.33363"/>
       <trkpt lat="37.86893" lon="-119.33343"/>
     </trkseg>
-  </trk> -->
+  </trk>
 </gpx>

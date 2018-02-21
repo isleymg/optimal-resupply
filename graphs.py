@@ -107,8 +107,8 @@ class Digraph:
         self.children[node] = dict()
         self.parents[node] = dict()
 
-    def add_arc(self, tail, head, weight):
-        '''creates directed arc from tail to head and assigns a weight'''
+    def add_edge(self, tail, head, weight):
+        '''creates directed edge from tail to head and assigns a weight'''
         if tail not in self.nodes:
             self.add_node(tail)
         if head not in self.nodes:
@@ -118,10 +118,10 @@ class Digraph:
         self.parents[head][tail] = weight
         self.edges += 1
 
-    def has_arc(self, tail, head):
+    def has_edge(self, tail, head):
         return tail in self.nodes and head in self.children[tail]
 
-    def get_arc_weight(self, tail, head):
+    def get_edge_weight(self, tail, head):
         if tail not in self.nodes:
             raise Exception("The tail node is not present in this digraph.")
 
@@ -133,8 +133,8 @@ class Digraph:
 
         return self.children[tail][head]
 
-    def remove_arc(self, tail, head):
-        '''removes directed arc from tail to head'''
+    def remove_edge(self, tail, head):
+        '''removes directed edge from tail to head'''
         if tail not in self.nodes:
             return
 
@@ -146,7 +146,7 @@ class Digraph:
         self.edges -= 1
 
     def remove_node(self, node):
-        '''removes node from digraph and removes all arcs incident on input node'''
+        '''removes node from digraph and removes all edges incident on input node'''
         if node not in self.nodes:
             return
 
@@ -167,7 +167,7 @@ class Digraph:
     def __len__(self):
         return len(self.nodes)
 
-    def number_of_arcs(self):
+    def number_of_edges(self):
         return self.edges
 
     def get_parents_of(self, node):
@@ -185,6 +185,15 @@ class Digraph:
     def get_stats(self):
         print("Number of nodes: {}\nNumber of children: {}\nNumber of parents: {}\nNumber of edges: {}"
               .format(len(self.nodes), len(self.children), len(self.parents), self.edges))
+
+    def print_graph(self):
+        '''TODO: Prints a visual of nodes and edges'''
+        pass
+
+    def get_nodes(self):
+        for node in self.nodes:
+            print(node)
+        
 
     def clear(self):
         del self.nodes[:]
