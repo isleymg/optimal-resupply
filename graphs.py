@@ -1,6 +1,4 @@
 
-
-
 class Graph(object):
     '''
     Python class to represent a Graph object
@@ -92,53 +90,70 @@ class Graph(object):
         return degree
 
 
+'''
+Implementation of a directed graph as an adjacency list
+'''
+
+
 class Node:
-    def __init__(self, latitude, longitude, elevation, next):
-        self.latitude = latitude
-        self.longitude = longitude
-        self.elevation = elevation
-        self.next = set()
+    def __init__(self, key):
+        self.id = key
+        self.connected_to = {}
 
-    def get_lat(self):
-        return self.latitude
+    def add_neighbor(self, neighbor, weight=0):
+        self.connected_to[neighbor] = weight
+        print(str(self.id) + " connected to " + str(self.connected_to))
 
-    def get_lon(self):
-        return self.longitude
+    def get_connections(self):
+        return self.connected_to
 
-    def get_lat(self):
-        return self.latitude
+    def get_id(self):
+        return self.id
 
-    def get_lat(self):
-        return self.latitude
+    def get_weight(self, neighbor):
+        return self.connected_to[neighbor]
+
 
 
 class Digraph:
     '''
     Implements a directed, weighted graph'''
     def __init__(self):
-        self.nodeList = dict()
-        self.children = dict()
-        self.parents = dict()
-        self.edges = 0
+        self.node_list = dict()
+        self.num_nodes = 0
 
-    def add_node(self, node):
-        if node in self.nodes:
+    def add_node(self, key):
+        if key in self.node_list:
             return
-        self.nodes.add(node)
-        self.children[node] = dict()
-        self.parents[node] = dict()
+        self.num_nodes += 1
+        new_node = Node(key)
+        self.node_list[key] = new_node
+        return new_node
 
-    def add_edge(self, tail, head, weight):
+    def add_edge(self, from_node, to_node, cost=0):
         '''creates directed edge from tail to head and assigns a weight'''
-        if tail not in self.nodes:
-            self.add_node(tail)
-        if head not in self.nodes:
-            self.add_node(head)
+        if from_node not in self.node_list:
+            nv = self.add_node(from_node)
+        if to_node not in self.node_list:
+            nv = self.add_node(to_node)
 
-        self.children[tail][head] = weight
-        self.parents[head][tail] = weight
-        self.edges += 1
+        self.node_list[from_node].add_neighbor(self.node_list[to_node], cost)
 
+
+    def get_nodes(self):
+        return self.node_list.keys()
+
+    def __iter__(self):
+        return iter(self.node_list.values())
+
+    def show(self):
+        for node in self.node_list:
+            print(node.id)
+            print(node.get_connections())
+            # for conn in node.get_connections():
+            #     print("( %s , %s )" % (node.getId(), conn.getId()))
+
+"""
     def has_edge(self, tail, head):
         return tail in self.nodes and head in self.children[tail]
 
@@ -207,21 +222,6 @@ class Digraph:
         print("Number of nodes: {}\nNumber of children: {}\nNumber of parents: {}\nNumber of edges: {}"
               .format(len(self.nodes), len(self.children), len(self.parents), self.edges))
 
-    def print_graph(self):
-        for parent in self.parents:
-            print(parent, self.get_children_of(parent))
-        '''TODO: Prints a visual of nodes and edges'''
-        pass
-
-    def get_nodes(self):
-        return self.nodes
-
-    def get_parents(self):
-        return self.parents
-
-    def get_children(self):
-        return self.children
-
     def print_nodes(self):
         formatted_node = '''
         Name: {} \n
@@ -237,11 +237,4 @@ class Digraph:
             #                             node.latitude,
             #                             node.elevation,
             #                             node.next))
-        
-
-    def clear(self):
-        del self.nodes[:]
-        self.children.clear()
-        self.parents.clear()
-        self.edges=0
-
+ """       
