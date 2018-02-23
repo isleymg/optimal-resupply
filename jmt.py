@@ -2,7 +2,7 @@
 Creates a graph representation of the points from cleaned_data.gpx 
 '''
 
-from graphs import Digraph 
+from graphs import Digraph, Node
 import gpxpy
 
 file = open('test_data.gpx')
@@ -17,7 +17,7 @@ digraph = Digraph()
 for track in jmt_gpx.tracks:
   for segment in track.segments:
     for point in segment.points:
-      start_node = point
+      start_node = Node(point.latitude, point.longitude, point.elevation, None)
       digraph.add_node(start_node)
       break
 
@@ -36,7 +36,10 @@ print(prev_node)
 
 
 digraph.get_stats()
-# digraph.get_nodes()
+digraph.print_nodes()
+# for i in digraph.get_parents():
+#   print(i)
+
 
 # TODO: 
 # 1) modify Digraph class to print visual of nodes

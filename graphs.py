@@ -1,5 +1,6 @@
 
 
+
 class Graph(object):
     '''
     Python class to represent a Graph object
@@ -91,11 +92,31 @@ class Graph(object):
         return degree
 
 
+class Node:
+    def __init__(self, latitude, longitude, elevation, next):
+        self.latitude = latitude
+        self.longitude = longitude
+        self.elevation = elevation
+        self.next = set()
+
+    def get_lat(self):
+        return self.latitude
+
+    def get_lon(self):
+        return self.longitude
+
+    def get_lat(self):
+        return self.latitude
+
+    def get_lat(self):
+        return self.latitude
+
+
 class Digraph:
     '''
     Implements a directed, weighted graph'''
     def __init__(self):
-        self.nodes = set()
+        self.nodeList = dict()
         self.children = dict()
         self.parents = dict()
         self.edges = 0
@@ -187,12 +208,35 @@ class Digraph:
               .format(len(self.nodes), len(self.children), len(self.parents), self.edges))
 
     def print_graph(self):
+        for parent in self.parents:
+            print(parent, self.get_children_of(parent))
         '''TODO: Prints a visual of nodes and edges'''
         pass
 
     def get_nodes(self):
+        return self.nodes
+
+    def get_parents(self):
+        return self.parents
+
+    def get_children(self):
+        return self.children
+
+    def print_nodes(self):
+        formatted_node = '''
+        Name: {} \n
+        Long: {}, Lat: {}
+        Elevation: {} \n
+        Next: {}
+        '''
+
         for node in self.nodes:
-            print(node)
+            print(type(node))
+            # print(formatted_node.format(node.name, 
+            #                             node.longitude,
+            #                             node.latitude,
+            #                             node.elevation,
+            #                             node.next))
         
 
     def clear(self):
