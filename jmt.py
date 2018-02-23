@@ -16,7 +16,7 @@ digraph = Digraph()
 for track in jmt_gpx.tracks:
   for segment in track.segments:
     for point in segment.points:
-        from_node = digraph.add_node(Node((point.latitude, point.longitude, point.elevation)))
+        from_node = Node((point.latitude, point.longitude, point.elevation))
         break
 
 
@@ -26,12 +26,18 @@ for track in jmt_gpx.tracks:
   for segment in track.segments:
     for point in segment.points:
         to_node = Node((point.latitude, point.longitude, point.elevation))
-        digraph.add_edge(from_node, to_node)
-        from_node = to_node
 
-## POR QUE NODE CONNECTIONS RETURNING EMPTY?!
+        if to_node.id == from_node.id:
+            pass
+        else:
+            print('from', from_node.id)
+            print('to', to_node.id)
+            digraph.add_edge(from_node, to_node)
+            from_node = to_node
+
+
 for node in digraph.node_list:
-    print(node.connected_to)
+    print(digraph.node_list[node].connected_to)
 # digraph.show()
 
 

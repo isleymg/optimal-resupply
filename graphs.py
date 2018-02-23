@@ -102,7 +102,7 @@ class Node:
 
     def add_neighbor(self, neighbor, weight=0):
         self.connected_to[neighbor] = weight
-        print(str(self.id) + " connected to " + str(self.connected_to))
+        # print(str(self.id) + " connected to " + str(self.connected_to))
 
     def get_connections(self):
         return self.connected_to
