@@ -105,11 +105,9 @@ class Node:
         self.connected_to = {}
 
     def add_neighbor(self, neighbor, weight=0):
-        # neighbor_node = Node(neighbor.id, neighbor.connected_to)
-        print("SELF", self.connected_to)
+        print("FROM_NODE", self.id)
         self.connected_to[neighbor] = weight
-        print("CONNECTED TO", self.connected_to)
-        # print(str(self.id) + " connected to " + str(self.connected_to))
+        print("CONNECTED TO", list(self.connected_to.keys())[0].id, '\n')
 
     def get_connections(self):
         return self.connected_to
@@ -136,18 +134,17 @@ class Digraph:
             return
         self.num_nodes += 1
         # new_node = Node(key.id, key.connected_to)
-        print("added ", key.id)
+        print("added node ", key.id)
         self.node_list[key] = key
         # return new_node
 
     def add_edge(self, from_node, to_node, cost=0):
         '''creates directed edge from tail to head and assigns a weight'''
-
-        if to_node not in self.node_list:
-            self.add_node(to_node)
         if from_node not in self.node_list:
             self.add_node(from_node)
-        print(self.node_list[from_node].id)
+        if to_node not in self.node_list:
+            self.add_node(to_node)
+
         self.node_list[from_node].add_neighbor(to_node, cost)
         # self.node_list[from_node].add_neighbor(self.node_list[to_node], cost)
 
@@ -159,6 +156,6 @@ class Digraph:
         return iter(self.node_list.values())
 
     def show(self):
-        for i in (self.node_list.items()):
-            print(i)
+        for i in (self.node_list):
+            print(i.id, "--->", list(i.get_connections().keys())[0].id)
 

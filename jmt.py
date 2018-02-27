@@ -5,7 +5,7 @@ Creates a graph representation of the points from cleaned_data.gpx
 from graphs import Digraph, Node
 import gpxpy
 
-file = open('test2.gpx')
+file = open('test3.gpx')
 jmt_gpx = gpxpy.parse(file)
 gpxObj = gpxpy.gpx.GPX()
 
@@ -34,7 +34,5 @@ for track in jmt_gpx.tracks:
         else:
             digraph.add_edge(from_node, to_node)
             from_node = to_node
-            print(digraph.node_list[from_node].connected_to.keys())
-        # print(digraph.show())
 
 digraph.show()
