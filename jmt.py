@@ -13,10 +13,12 @@ gpxObj = gpxpy.gpx.GPX()
 digraph = Digraph()
 
 '''get starting track point'''
+from_node = None
 for track in jmt_gpx.tracks:
   for segment in track.segments:
     for point in segment.points:
         from_node = Node((point.latitude, point.longitude, point.elevation))
+        start_node = from_node
         break
 
 
@@ -30,16 +32,9 @@ for track in jmt_gpx.tracks:
         if to_node.id == from_node.id:
             pass
         else:
-            print('from', from_node.id)
-            print('to', to_node.id)
             digraph.add_edge(from_node, to_node)
             from_node = to_node
+            print(digraph.node_list[from_node].connected_to.keys())
+        # print(digraph.show())
 
-
-for node in digraph.node_list:
-    print(digraph.node_list[node].connected_to)
-# digraph.show()
-
-
-# TODO: 
-# 1) modify Digraph class to print visual of nodes
+digraph.show()

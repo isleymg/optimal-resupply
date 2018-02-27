@@ -96,12 +96,19 @@ Implementation of a directed graph as an adjacency list
 
 
 class Node:
-    def __init__(self, key):
-        self.id = key
+    def __init__(self, id):
+        '''
+        node_id: tuple (long, lat, elevation, name)
+        connected_to: dictonary with node as key and weight as value
+        '''
+        self.id = id
         self.connected_to = {}
 
     def add_neighbor(self, neighbor, weight=0):
+        # neighbor_node = Node(neighbor.id, neighbor.connected_to)
+        print("SELF", self.connected_to)
         self.connected_to[neighbor] = weight
+        print("CONNECTED TO", self.connected_to)
         # print(str(self.id) + " connected to " + str(self.connected_to))
 
     def get_connections(self):
@@ -117,27 +124,32 @@ class Node:
 
 class Digraph:
     '''
-    Implements a directed, weighted graph'''
+    Implements a directed, weighted graph
+    node_list: dictionary with node id as key and connected_to as value
+    '''
     def __init__(self):
-        self.node_list = dict()
+        self.node_list = {}
         self.num_nodes = 0
 
     def add_node(self, key):
         if key in self.node_list:
             return
         self.num_nodes += 1
-        new_node = Node(key)
-        self.node_list[key] = new_node
-        return new_node
+        # new_node = Node(key.id, key.connected_to)
+        print("added ", key.id)
+        self.node_list[key] = key
+        # return new_node
 
     def add_edge(self, from_node, to_node, cost=0):
         '''creates directed edge from tail to head and assigns a weight'''
-        if from_node not in self.node_list:
-            nv = self.add_node(from_node)
-        if to_node not in self.node_list:
-            nv = self.add_node(to_node)
 
-        self.node_list[from_node].add_neighbor(self.node_list[to_node], cost)
+        if to_node not in self.node_list:
+            self.add_node(to_node)
+        if from_node not in self.node_list:
+            self.add_node(from_node)
+        print(self.node_list[from_node].id)
+        self.node_list[from_node].add_neighbor(to_node, cost)
+        # self.node_list[from_node].add_neighbor(self.node_list[to_node], cost)
 
 
     def get_nodes(self):
@@ -147,11 +159,9 @@ class Digraph:
         return iter(self.node_list.values())
 
     def show(self):
-        for node in self.node_list:
-            print(node.id)
-            print(node.get_connections())
-            # for conn in node.get_connections():
-            #     print("( %s , %s )" % (node.getId(), conn.getId()))
+        for i in (self.node_list.items()):
+            print(i)
+
 
 """
     def has_edge(self, tail, head):
