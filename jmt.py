@@ -32,7 +32,8 @@ for track in jmt_gpx.tracks:
         if to_node.id == from_node.id:
             pass
         else:
-            digraph.add_edge(from_node, to_node)
+            weight = to_node.id[2]-from_node.id[2]
+            digraph.add_edge(from_node, to_node, weight)
             from_node = to_node
 
 digraph.show()

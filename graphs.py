@@ -94,11 +94,12 @@ class Graph(object):
 Implementation of a directed graph as an adjacency list
 '''
 
+from collections import OrderedDict
 
 class Node:
     def __init__(self, id):
         '''
-        node_id: tuple (long, lat, elevation, name)
+        node_id: tuple (long, lat, elevation)
         connected_to: dictonary with node as key and weight as value
         '''
         self.id = id
@@ -138,15 +139,15 @@ class Digraph:
         self.node_list[key] = key
         # return new_node
 
-    def add_edge(self, from_node, to_node, cost=0):
+    def add_edge(self, from_node, to_node, weight=0):
         '''creates directed edge from tail to head and assigns a weight'''
         if from_node not in self.node_list:
             self.add_node(from_node)
         if to_node not in self.node_list:
             self.add_node(to_node)
 
-        self.node_list[from_node].add_neighbor(to_node, cost)
-        # self.node_list[from_node].add_neighbor(self.node_list[to_node], cost)
+        self.node_list[from_node].add_neighbor(to_node, weight)
+        # self.node_list[from_node].add_neighbor(self.node_list[to_node], weight)
 
 
     def get_nodes(self):
@@ -156,6 +157,10 @@ class Digraph:
         return iter(self.node_list.values())
 
     def show(self):
-        for i in (self.node_list):
-            print(i.id, "--->", list(i.get_connections().keys())[0].id)
+        try:
+            for i in (self.node_list):
+                for key in i.get_connections().keys():
+                    print(i.id, "---",i.get_weight(key),"-->", list(i.get_connections().keys())[0].id)
+        except:
+            print('END OF SEGMENT')
 

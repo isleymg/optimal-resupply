@@ -9,12 +9,24 @@
       </gpxx:TrackExtension>
     </extensions>
     <trkseg>
-      <trkpt lat="1" lon="1"/>
-      <trkpt lat="2" lon="2"/>
-      <trkpt lat="3" lon="3"/>
-      <trkpt lat="4" lon="4"/>
-      <trkpt lat="5" lon="5"/>
-      <trkpt lat="6" lon="6"/>
+      <trkpt lat="1" lon="1">
+        <ele>100</ele>
+      </trkpt>
+      <trkpt lat="2" lon="2">
+        <ele>200</ele>
+      </trkpt>
+      <trkpt lat="3" lon="3">
+        <ele>300</ele>
+      </trkpt>
+      <trkpt lat="4" lon="4">
+        <ele>400</ele>
+      </trkpt>
+      <trkpt lat="5" lon="5">
+        <ele>500</ele>
+      </trkpt>
+      <trkpt lat="6" lon="6">
+        <ele>600</ele>
+      </trkpt>
     </trkseg>
   </trk>
 </gpx>
