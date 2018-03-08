@@ -45,11 +45,16 @@ digraph.show()
 
 '''
 TODO: 
+0) Calculate distance between points
 1) Determine function for weight:
     - elevation gain/loss
+    - distance in between
     - water sources
 2) Add/modify nodes for Waypoints
     - resupply locations
     - non-resupply locations
 3) Add tracks for alternate trails to resupply locations
+
+
+***NOTE TO SELF: taking a break from this project to learn QGIS for geospatial data***
 '''
